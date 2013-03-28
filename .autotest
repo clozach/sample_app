@@ -15,8 +15,6 @@ require 'autotest/restart'
 # Autotest::RCov.pattern = o
 # Autotest::RCov.options = o
 
-Autotest::Growl::show_modified_files = true
-
 Autotest.add_hook(:initialize) { |at|
   at.add_exception %r{^\.git}  # ignore Version Control System
   at.add_exception %r{^./tmp}  # ignore temp files, lest autotest will run again, and again...
