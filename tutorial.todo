@@ -63,5 +63,10 @@ Chapter 3:
             ✔ Implement change (green) @done (13-03-28 00:06)
                 # change home.html.erb <h1> content to 'Sample App'
         3.2.2 - Adding a page manually:
-            ☐ Write a failing test for "About"
-            ☐ Make the test pass
+            ✔ Write a failing test for "About" @done (13-03-28 11:16)
+            ✔ Make the test pass @done (13-03-28 11:17) @done (13-03-28 11:22)
+                ✔ Add route @done (13-03-28 11:17)
+                ✔ Add controller action @done (13-03-28 11:17)
+                ✔ Add view @done (13-03-28 11:17)
+                ✔ Visually inspect http://localhost:6660/static_pages/about @done (13-03-28 11:22)
+    3.3 - Slightly Dynamic Pages:
