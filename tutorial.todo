@@ -1,64 +1,67 @@
 Prerequisite:
  ✔ Install rails @done (13-03-27 16:41)
 Chapter 3:
-  3.0 - App Setup:
-  ✔ Create sample_app @done (13-03-27 16:40)
-    rails new sample_app --skip-test-unit
-  ✔ Configure sample_app @done (13-03-27 16:56)
-    cd sample_app
-    subl Gemfile #Listing 3.1. Note: full Gemfile at Listing 9.49
-    bundle install --without production
-    rails generate rspec:install     #Required once prior to using generate w/rspec
-    --> Failed w/'dyld: lazy symbol binding failed: Symbol not found: _rb_intern2' Messed about and retried...worked. Not sure whassup
-  ✔ GIT @done (13-03-27 17:02)
-    subl .gitignore #Listing 1.7
-    git init
-    git add .
-    git commit -m "initial commit"
-  ✔ Customize README @done (13-03-27 17:02)
-    git mv README.rdoc README.md
-    git commit -a -m "Use markdown for readme"  #-a = stage-all
-  ✔ Create new repo named "sample_app" on GitHub @done (13-03-27 17:32)
-  ✔ Push to github @done (13-03-27 17:32)
-    git remote add origin git@github.com:clozach/sample_app.git
-    git push -u origin master  #-u = set-upstream, i.e., tracking reference
-  ☐ Create Personal Heroku account
-  ☐ Deploy sample_app to Heroku
-    heroku create --stack cedar ??
-    git push heroku master
-  3.1 - Static Pages:
-  ✔ Hello World - truly static html @done (13-03-27 18:32)
-    subl .   #open full project in Sublime Text
-    rails s -p 6660 -d   #-p port, -d (as) daemon
-    tail -f log/development.log   #in another tab
-    subl public/hello.html    #put stuff in, test http://localhost:6660/hello.html shows content
-    rm public                       #verify http:localhost:6660/hello.html gives "Routing Error"
-  ✔ Create a static pages helper @done (13-03-27 18:37)
-    rails generate controller StaticPages home help --no-test-framework
-    # --no-test-framework...will add tests later (Section 3.2)
-    # 'home' & 'help' created automatically. 'about' route created later w/TDD
-    # Verified: http://localhost:6660/static_pages/home has content
-    -NOTE- Box 3.1 explains how to reverse results of 'generate'
-    git add .
-    git commit -m "Add StaticPages controller"
-  3.2 - Intro to TDD:
-    3.2.1 - aux -> set up autotest:
-      See http://ph7spot.com/musings/getting-started-with-autotest
-    ✔ Update Gemfile group :test @done (13-03-28 00:28)
-        gem 'ZenTest'
-        gem 'autotest-rails'
-        gem 'autotest-growl'
-        gem 'autotest-fsevent'
-    ✔ Copy .autotest at project root & modify @done (13-03-28 00:28)
-      cp /Users/clozach/.rvm/gems/ruby-1.9.3-p392/gems/ZenTest-4.9.0/example_dot_autotest.rb .autotest
-      --> See "First TDD" commit for .autotest contents
-    3.2.1 - First test: changing page content:
-    ✔ Start static_pages integration tests (red) @done (13-03-28 00:06)
-      rails generate integration_test static_pages
-      subl spec/requests/static_pages_spec.rb
-      bundle exec rspec spec/requests/static_pages_spec.rb
-      --> Red light: something wrong with auto-generated 'path_to_static_pages_home'. I didn't bother figuring out what.
-      #Edited static_pages_spec.rb according to Listing 3.9
-      --> Red light: 'expected there to be content "Sample App"...'
-    ✔ Implement change (green) @done (13-03-28 00:06)
-      # change home.html.erb <h1> content to 'Sample App'
+    3.0 - App Setup:
+    ✔ Create sample_app @done (13-03-27 16:40)
+        rails new sample_app --skip-test-unit
+    ✔ Configure sample_app @done (13-03-27 16:56)
+        cd sample_app
+        subl Gemfile #Listing 3.1. Note: full Gemfile at Listing 9.49
+        bundle install --without production
+        rails generate rspec:install     #Required once prior to using generate w/rspec
+        --> Failed w/'dyld: lazy symbol binding failed: Symbol not found: _rb_intern2' Messed about and retried...worked. Not sure whassup
+    ✔ GIT @done (13-03-27 17:02)
+        subl .gitignore #Listing 1.7
+        git init
+        git add .
+        git commit -m "initial commit"
+    ✔ Customize README @done (13-03-27 17:02)
+        git mv README.rdoc README.md
+        git commit -a -m "Use markdown for readme"  #-a = stage-all
+    ✔ Create new repo named "sample_app" on GitHub @done (13-03-27 17:32)
+    ✔ Push to github @done (13-03-27 17:32)
+        git remote add origin git@github.com:clozach/sample_app.git
+        git push -u origin master  #-u = set-upstream, i.e., tracking reference
+    ☐ Create Personal Heroku account
+    ☐ Deploy sample_app to Heroku
+        heroku create --stack cedar ??
+        git push heroku master
+    3.1 - Static Pages:
+      ✔ Hello World - truly static html @done (13-03-27 18:32)
+          subl .   #open full project in Sublime Text
+          rails s -p 6660 -d   #-p port, -d (as) daemon
+          tail -f log/development.log   #in another tab
+          subl public/hello.html    #put stuff in, test http://localhost:6660/hello.html shows content
+          rm public                       #verify http:localhost:6660/hello.html gives "Routing Error"
+      ✔ Create a static pages helper @done (13-03-27 18:37)
+          rails generate controller StaticPages home help --no-test-framework
+          # --no-test-framework...will add tests later (Section 3.2)
+          # 'home' & 'help' created automatically. 'about' route created later w/TDD
+          # Verified: http://localhost:6660/static_pages/home has content
+          -NOTE- Box 3.1 explains how to reverse results of 'generate'
+          git add .
+          git commit -m "Add StaticPages controller"
+    3.2 - Intro to TDD:
+        3.2.1 - aux -> set up autotest:
+            See http://ph7spot.com/musings/getting-started-with-autotest
+            ✔ Update Gemfile group :test @done (13-03-28 00:28)
+                gem 'ZenTest'
+                gem 'autotest-rails'
+                gem 'autotest-growl'
+                gem 'autotest-fsevent'
+            ✔ Copy .autotest at project root & modify @done (13-03-28 00:28)
+                cp /Users/clozach/.rvm/gems/ruby-1.9.3-p392/gems/ZenTest-4.9.0/example_dot_autotest.rb .autotest
+                --> See "First TDD" commit for .autotest contents
+        3.2.1 - First test: changing page content:
+            ✔ Start static_pages integration tests (red) @done (13-03-28 00:06)
+                rails generate integration_test static_pages
+                subl spec/requests/static_pages_spec.rb
+                bundle exec rspec spec/requests/static_pages_spec.rb
+                --> Red light: something wrong with auto-generated 'path_to_static_pages_home'. I didn't bother figuring out what.
+                #Edited static_pages_spec.rb according to Listing 3.9
+                --> Red light: 'expected there to be content "Sample App"...'
+            ✔ Implement change (green) @done (13-03-28 00:06)
+                # change home.html.erb <h1> content to 'Sample App'
+        3.2.2 - Adding a page manually:
+            ☐ Write a failing test for "About"
+            ☐ Make the test pass
