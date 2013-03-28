@@ -27,13 +27,13 @@ Chapter 3:
     heroku create --stack cedar ??
     git push heroku master
   3.1 - Static Pages:
-  ☐ Hello World - truly static html
+  ✔ Hello World - truly static html @done (13-03-27 18:32)
     subl .   #open full project in Sublime Text
     rails s -p 6660 -d   #-p port, -d (as) daemon
     tail -f log/development.log   #in another tab
     subl public/hello.html    #put stuff in, test http://localhost:6660/hello.html shows content
     rm public                       #verify http:localhost:6660/hello.html gives "Routing Error"
-  ☐ Create a static pages helper
+  ✔ Create a static pages helper @done (13-03-27 18:37)
     rails generate controller StaticPages home help --no-test-framework
     # --no-test-framework...will add tests later (Section 3.2)
     # 'home' & 'help' created automatically. 'about' route created later w/TDD
