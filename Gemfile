@@ -10,7 +10,6 @@ group :development, :test do
   gem 'rspec-rails', '2.9.0'
 end
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -26,6 +25,10 @@ end
 gem 'jquery-rails'
 
 group :test do
+  gem 'ZenTest'
+  gem 'autotest-rails'
+  gem 'autotest-growl'
+  gem 'autotest-fsevent'
 	gem 'capybara', '1.1.2'
 end
 

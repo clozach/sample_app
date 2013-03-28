@@ -1,0 +1,31 @@
+# -*- ruby -*-
+
+# require 'autotest/autoupdate'
+# require 'autotest/bundler'
+# require 'autotest/isolate'
+# require 'autotest/once'
+# require 'autotest/rcov'
+require 'autotest/restart'
+# require 'autotest/timestamp'
+
+# Autotest::AutoUpdate.sleep_time = o
+# Autotest::AutoUpdate.update_cmd = o
+# Autotest::Isolate.dir = o
+# Autotest::RCov.command = o
+# Autotest::RCov.pattern = o
+# Autotest::RCov.options = o
+
+Autotest::Growl::show_modified_files = true
+
+Autotest.add_hook(:initialize) { |at|
+  at.add_exception %r{^\.git}  # ignore Version Control System
+  at.add_exception %r{^./tmp}  # ignore temp files, lest autotest will run again, and again...
+  #  at.clear_mappings         # take out the default (test/test*rb)
+  %w{.DS_Store ._* vendor log doc}.each do |exception|
+    at.add_exception(exception)
+  end
+  at.add_mapping(%r{^lib/.*\.rb$}) {|f, _|
+    Dir['spec/**/*_spec.rb']
+  }
+  nil
+}
