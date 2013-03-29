@@ -90,3 +90,9 @@ Chapter 3:
         Nothing to do!
         Turns out I did roughly the right thing in previous commit as a side effect of forgetting to 'hide' layouts/application.html.erb
     3.5 - Exercises
+        ✔ 1. Make a Contact page @done (13-03-29 16:05)
+            ✔ Red test for title @done (13-03-29 09:37)
+            ✔ Green test @done (13-03-29 16:04)
+        ☐ 2. Use 'let' to reduce duplication in StaticPagesController
+        ☐ 3. Install local PostgreSQL so dev environment better matches production
+    4 :

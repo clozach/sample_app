@@ -1,10 +1,11 @@
 require 'spec_helper'
 
 describe "StaticPages" do
-  %w[Home Help About].each do |file|
+  %w[Home Help About Contact].each do |file|
     it "should contain #{file} in the title" do
       lower = file.downcase
       visit "/static_pages/#{lower}" #visit => Capybara method loads content into 'page'
+      p file
       page.should have_selector('title', text: "Sample App | #{file}")
     end
   end
