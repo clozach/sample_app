@@ -82,4 +82,8 @@ Chapter 3:
                 ✔ Add controller action @done (13-03-28 11:17)
                 ✔ Add view @done (13-03-28 11:17)
                 ✔ Visually inspect http://localhost:6660/static_pages/about @done (13-03-28 11:22)
-    3.3 - Slightly Dynamic Pages:
+    3.3.1/2 - Slightly Dynamic Pages:
+        ✔ Red tests for <title> @done (13-03-29 08:58)
+        ✔ Green tests for <title> @done (13-03-29 08:58)
+        --> Ended up having to modify layout prematurely...book's solution failed since generate already created the layout
+    3.3.3 - Embedded Ruby:
