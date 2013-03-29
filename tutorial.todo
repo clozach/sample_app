@@ -22,9 +22,22 @@ Chapter 3:
     ✔ Push to github @done (13-03-27 17:32)
         git remote add origin git@github.com:clozach/sample_app.git
         git push -u origin master  #-u = set-upstream, i.e., tracking reference
-    ☐ Create Personal Heroku account
-    ☐ Deploy sample_app to Heroku
-        heroku create --stack cedar ??
+    ✔ Create Personal Heroku account @done (13-03-28 20:51)
+    ✔ Deploy sample_app to Heroku @done (13-03-28 21:44)
+        heroku create   #No need for '--stack cedar' as Cedar is now default
+        git push heroku master
+        --> Failed. Had to follow steps below to prevent ssh conflicts between personal & work accounts
+        --> Thanks to: http://sleepy-coast-8299.herokuapp.com/
+        ssh-keygen -t rsa
+        Enter file in which to save the key (/Users/clozach/.ssh/id_rsa): /Users/clozach/.ssh/personal_heroku
+        heroku login   #Picked personal_heroku ssh when prompted
+        heroku keys:add /Users/clozach/.ssh/personal_heroku.pub
+        subl .git/config       #  url = git@heroku.com:sleepy-coast-8299.git  -->  url = git@heroku.clozach:sleepy-coast-8299.git
+        subl ~/.ssh/config
+            Host heroku.clozach
+              HostName heroku.com
+              IdentityFile ~/.ssh/personal_heroku
+              IdentitiesOnly yes
         git push heroku master
     3.1 - Static Pages:
       ✔ Hello World - truly static html @done (13-03-27 18:32)
