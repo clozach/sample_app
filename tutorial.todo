@@ -86,4 +86,7 @@ Chapter 3:
         ✔ Red tests for <title> @done (13-03-29 08:58)
         ✔ Green tests for <title> @done (13-03-29 08:58)
         --> Ended up having to modify layout prematurely...book's solution failed since generate already created the layout
-    3.3.3 - Embedded Ruby:
+    3.3.3/4 - Embedded Ruby:
+        Nothing to do!
+        Turns out I did roughly the right thing in previous commit as a side effect of forgetting to 'hide' layouts/application.html.erb
+    3.5 - Exercises
