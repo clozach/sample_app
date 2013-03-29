@@ -93,6 +93,6 @@ Chapter 3:
         ✔ 1. Make a Contact page @done (13-03-29 16:05)
             ✔ Red test for title @done (13-03-29 09:37)
             ✔ Green test @done (13-03-29 16:04)
-        ☐ 2. Use 'let' to reduce duplication in StaticPagesController
+        ✔ 2. Use 'let' to reduce duplication in StaticPagesController @done (13-03-29 16:58)
         ☐ 3. Install local PostgreSQL so dev environment better matches production
     4 :
