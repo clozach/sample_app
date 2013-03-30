@@ -95,4 +95,9 @@ Chapter 3:
             ✔ Green test @done (13-03-29 16:04)
         ✔ 2. Use 'let' to reduce duplication in StaticPagesController @done (13-03-29 16:58)
         ☐ 3. Install local PostgreSQL so dev environment better matches production
-    4 :
+    3.6 - "Advanced" testing setup:
+        3.6.1 - Elminating 'bundle exec':
+        3.6.2 - Automated Tests with Guard:
+        3.6.3 - Speeding Up Tests with Spork:
+        3.6.4 - Tests inside Sublime Test:
+    4 Rails-Flavored Ruby: 
