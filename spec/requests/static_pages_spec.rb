@@ -5,7 +5,7 @@ describe "StaticPages" do
 
   context "Title tag"
   %w[Home Help About Contact].each do |file|
-    it "should contain #{:base_title} and #{file}" do
+    it "should contain base_title and #{file}" do
       lower = file.downcase 
       visit "/static_pages/#{lower}" #visit => Capybara method loads content into 'page'
       p file
@@ -14,7 +14,7 @@ describe "StaticPages" do
   end
 
   context "Home Page" do
-    it "should have the content #{:base_title}" do
+    it "should have the content base_title" do
     	visit '/static_pages/home' #visit => Capybara method loads content into 'page'
     	page.should have_selector('h1', text: base_title)
     end
