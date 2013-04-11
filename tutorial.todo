@@ -96,8 +96,25 @@ Chapter 3:
         ✔ 2. Use 'let' to reduce duplication in StaticPagesController @done (13-03-29 16:58)
         ☐ 3. Install local PostgreSQL so dev environment better matches production
     3.6 - "Advanced" testing setup:
-        3.6.1 - Elminating 'bundle exec':
+        ☐ 3.6.1 - Elminating 'bundle exec'
+            rvm get head && rvm reload
+            chmod +x $rvm_path/hooks/after_cd_bundler
+            cd <root_path_to_app-e.g., ~/Documents/github/applauze-web>
+            bundle install --without production --binstubs=./bundler_stubs
+            --> Add 'bundler_stubs/' to .gitignore
+            --> IMPORTANT: Hereafter, don't just 'bundle'. Instead:
+            bundle install --binstubs=./bundler_stubs
+            --> To this end, add to .bashrc --> alias bbundle="bundle install --binstubs=./bundler_stubs"
         3.6.2 - Automated Tests with Guard:
+            ✔ First do search for Guard vs autotest @done (13-04-10 18:01)
+            ☐ Watch railscast: http://railscasts.com/episodes/264-guard?view=comments
+            ☐ Watch Pry intro: http://pryrepl.org
         3.6.3 - Speeding Up Tests with Spork:
         3.6.4 - Tests inside Sublime Test:
-    4 Rails-Flavored Ruby: 
+            ✔ Install RubyTest package in Sublime @done (13-04-10 18:11)
+            ☐ Figure out how RubyTest actually works. Hrumph.
+Chapter 4 Rails-Flavored Ruby (read-only):
+Chapter 5 Filling in the Layout:
+        5.1.1 Site Navigation:
+            ☐ 
+        5.1.2 Bootstrap & Custom CSS:
