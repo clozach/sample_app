@@ -115,6 +115,7 @@ Chapter 3:
             ☐ Figure out how RubyTest actually works. Hrumph.
 Chapter 4 Rails-Flavored Ruby (read-only):
 Chapter 5 Filling in the Layout:
+    5.1 Adding structure:
         5.1.1 Site Navigation:
             ✔ Update application.html.erb @done (13-04-11 11:45)
             ✔ Update home.html.erb @done (13-04-11 11:54)
@@ -122,5 +123,11 @@ Chapter 5 Filling in the Layout:
             ✔ Add bootstrap-sass gem @done (13-04-11 12:48)
                         --> Add to Gemfile: gem 'bootstrap-sass', '2.0.0'
                         bundle install
-            ☐ Add custom.css.scss to app/assets/stylesheets
+            ✔ Add custom.css.scss to app/assets/stylesheets @done (13-04-11 13:24)
                 Note: anything in 'assets/stylesheets' is automatically compiled into application.css on delivery. Which could probably lead to performance bottlenecks. See http://www.youtube.com/watch?v=Il4swGfTOSM
+        5.1.3 Partials:
+            ✔ Move IE garbage into layouts/shim @done (13-04-11 14:47)
+            ☐ Move header into layouts/header
+            ☐ Add site footer
+            ☐ Add footer styles
+    5.2 Sass & the asset pipeline
