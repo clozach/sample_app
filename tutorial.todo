@@ -127,7 +127,7 @@ Chapter 5 Filling in the Layout:
                 Note: anything in 'assets/stylesheets' is automatically compiled into application.css on delivery. Which could probably lead to performance bottlenecks. See http://www.youtube.com/watch?v=Il4swGfTOSM
         5.1.3 Partials:
             ✔ Move IE garbage into layouts/shim @done (13-04-11 14:47)
-            ☐ Move header into layouts/header
+            ✔ Move header into layouts/header @done (13-04-11 14:51)
             ☐ Add site footer
             ☐ Add footer styles
     5.2 Sass & the asset pipeline
