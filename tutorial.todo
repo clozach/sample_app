@@ -130,4 +130,10 @@ Chapter 5 Filling in the Layout:
             ✔ Move header into layouts/header @done (13-04-11 14:51)
             ✔ Add site footer @done (13-04-11 15:14)
             ✔ Add footer styles @done (13-04-11 15:26)
-    5.2 Sass & the asset pipeline
+    5.2 Sass & the asset pipeline:
+        5.2.1 describes the asset pipeline (via Sprockets gem):
+        5.2.2 DRY w/Sass:
+            Benefits of (e.g.) SASS: nesting CSS, variables, mixins
+            ✔ Combine ".center" & ".center h1" @done (13-04-11 16:31)
+            X Combine "#logo" and "#logo:hover" (n/a since I opted for bootstrap's "brand" class)
+            ☐ etc.
