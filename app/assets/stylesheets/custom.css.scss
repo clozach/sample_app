@@ -37,7 +37,21 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 3em;
-	letter-spacing: -2px;
-	margin-bottom: 30px;
+	letter-spacing: -.1em;
+	margin-bottom: .9em;
 	// text-align: center;
+}
+
+h2 {
+	font-size: 1.7em;
+	letter-spacing: -.06em;
+	margin-bottom: .5em;
+	// text-align: center;
+	font-weight: normal;
+	color: #789;
+}
+
+p {
+	font-size: 1.1em;
+	line-height: 1.4em;
 }
