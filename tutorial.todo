@@ -119,7 +119,7 @@ Chapter 5 Filling in the Layout:
             ✔ Update application.html.erb @done (13-04-11 11:45)
             ✔ Update home.html.erb @done (13-04-11 11:54)
         5.1.2 Bootstrap & Custom CSS:
-            ☐ Add bootstrap-sass gem
+            ✔ Add bootstrap-sass gem @done (13-04-11 12:48)
                         --> Add to Gemfile: gem 'bootstrap-sass', '2.0.0'
                         bundle install
             ☐ Add custom.css.scss to app/assets/stylesheets
