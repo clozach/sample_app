@@ -117,5 +117,10 @@ Chapter 4 Rails-Flavored Ruby (read-only):
 Chapter 5 Filling in the Layout:
         5.1.1 Site Navigation:
             ✔ Update application.html.erb @done (13-04-11 11:45)
-            ☐ Update home.html.erb
+            ✔ Update home.html.erb @done (13-04-11 11:54)
         5.1.2 Bootstrap & Custom CSS:
+            ☐ Add bootstrap-sass gem
+                        --> Add to Gemfile: gem 'bootstrap-sass', '2.0.0'
+                        bundle install
+            ☐ Add custom.css.scss to app/assets/stylesheets
+                Note: anything in 'assets/stylesheets' is automatically compiled into application.css on delivery. Which could probably lead to performance bottlenecks. See http://www.youtube.com/watch?v=Il4swGfTOSM
