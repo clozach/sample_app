@@ -128,6 +128,6 @@ Chapter 5 Filling in the Layout:
         5.1.3 Partials:
             ✔ Move IE garbage into layouts/shim @done (13-04-11 14:47)
             ✔ Move header into layouts/header @done (13-04-11 14:51)
-            ☐ Add site footer
+            ✔ Add site footer @done (13-04-11 15:14)
             ☐ Add footer styles
     5.2 Sass & the asset pipeline
