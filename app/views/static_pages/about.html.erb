@@ -1,5 +1,9 @@
 <% provide :title, "About" %>
-<!-- content_for vs. provide >> http://api.rubyonrails.org/classes/ActionController/Streaming.html#label-Communication+between+layout+and+template -->
+<!--
+content_for vs. provide >> http://api.rubyonrails.org/classes/ActionController/Streaming.html#label-Communication+between+layout+and+template
+
+TL;DR provide says, "use the first one you find" and is thus more efficient, esp. for streaming html
+-->
 
 <h1>About this unnecessary page</h1>
 <p>
