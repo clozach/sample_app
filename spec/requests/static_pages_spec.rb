@@ -14,19 +14,12 @@ describe "StaticPages" do
   end
 
   context "Home Page" do
+    subject { page }
     before { visit root_path } #visit => Capybara method loads content into 'page'
 
-    it "should have the content base_title" do
-    	page.should have_selector('h1', text: base_title)
-    end
-
-    it "should NOT have Home in the title" do
-      page.should_not have_selector('title', text: "Home")
-    end
-
-    it "should NOT have a pipe" do
-      page.should_not have_selector('title', text: "|")
-    end
+    it { should have_selector('h1', text: base_title) }
+    it { should_not have_selector('title', text: "Home") }
+    it { should_not have_selector('title', text: "|") }
   end
 
   context "Help Page" do

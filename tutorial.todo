@@ -147,5 +147,5 @@ Chapter 5 Filling in the Layout:
             ✔ Replace '#' with path helpers @done (13-04-11 21:57)
         5.3.4 Pretty RSpec:
             ✔ DRY up "visit root_path" using 'before' block @done (13-04-11 22:26)
-            ☐ DRY up descriptions & functional code using 'it' blocks
+            ✔ DRY up descriptions & functional code using 'subject' and 'it' blocks @done (13-04-11 22:33)
             ☐ Do full_title exercise from Section 5.6
