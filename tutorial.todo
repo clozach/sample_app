@@ -141,4 +141,6 @@ Chapter 5 Filling in the Layout:
         5.3.0 Contact link:
             ✔ Add tests in static_pages_spec.rb @done (13-04-11 17:31)
             Note: The title test from the book was already covered in my DRY-er "Title tag" context
-            ☐ Add route for Contact page
+        5.3.1/2 Route tests:
+            ✔ Replace hard-coded routes in specs (red tests) @done (13-04-11 17:42)
+            ✔ Replace routes (green tests) @done (13-04-11 18:00)

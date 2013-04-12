@@ -7,36 +7,36 @@ describe "StaticPages" do
   %w[Home Help About Contact].each do |file|
     it "should contain base_title and #{file}" do
       lower = file.downcase 
-      visit "/static_pages/#{lower}" #visit => Capybara method loads content into 'page'
-      p file
+      path = "#{lower}_path"
+      visit send(path) #visit => Capybara method loads content into 'page'
       page.should have_selector('title', text: "#{base_title} | #{file}")
     end
   end
 
   context "Home Page" do
     it "should have the content base_title" do
-    	visit '/static_pages/home' #visit => Capybara method loads content into 'page'
+    	visit home_path #visit => Capybara method loads content into 'page'
     	page.should have_selector('h1', text: base_title)
     end
   end
 
   context "Help Page" do
   	it "should have the content 'Help'" do
-  		visit '/static_pages/help'
+  		visit help_path
       page.should have_selector('h1', text: 'Help')
   	end
   end
 
   context "About page" do
     it "should have the content 'About this unnecessary page'" do
-      visit '/static_pages/about'
+      visit about_path
       page.should have_selector('h1', text: 'About this unnecessary page')
     end
   end
 
   context "Contact page" do
     it "should have the h1 'Contact'" do
-      visit '/static_pages/contact'
+      visit contact_path
       page.should have_selector('h1', text: 'Do not contact me, please')
     end
   end
