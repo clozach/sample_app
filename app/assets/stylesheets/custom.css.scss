@@ -74,12 +74,15 @@ p {
 
 footer small, footer small a {
 	display: inline-block;
-	color: #789;
 	margin-top: 5px;
 }
 
-footer small a:hover {
-	color: #222;
+.navbar .nav > li > a {
+	color: #789;
+}
+
+.navbar .nav > li > a:hover {
+	color: #aaa;
 }
 
 // footer ul {
