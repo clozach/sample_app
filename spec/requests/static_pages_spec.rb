@@ -13,8 +13,10 @@ describe "StaticPages" do
     end
   end
 
+  # Set subject of remaining tests
+  subject { page }
+
   context "Home Page" do
-    subject { page }
     before { visit root_path } #visit => Capybara method loads content into 'page'
 
     it { should have_selector('h1', text: base_title) }
@@ -23,23 +25,17 @@ describe "StaticPages" do
   end
 
   context "Help Page" do
-  	it "should have the content 'Help'" do
-  		visit help_path
-      page.should have_selector('h1', text: 'Help')
-  	end
+    before { visit help_path }
+    it { should have_selector('h1', text: 'Help') }
   end
 
   context "About page" do
-    it "should have the content 'About this unnecessary page'" do
-      visit about_path
-      page.should have_selector('h1', text: 'About this unnecessary page')
-    end
+    before {visit about_path }
+    it { should have_selector('h1', text: 'About this unnecessary page') }
   end
 
   context "Contact page" do
-    it "should have the h1 'Contact'" do
-      visit contact_path
-      page.should have_selector('h1', text: 'Do not contact me, please')
-    end
+    before { visit contact_path }
+    it { should have_selector('h1', text: 'Do not contact me, please') }
   end
 end
