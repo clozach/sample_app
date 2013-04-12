@@ -37,4 +37,15 @@ describe "StaticPages" do
     let(:page_title) { 'Contact' }
     let(:heading) { 'Do not contact me, please' }
   end
+
+  it "should have the right links on the layout" do
+    visit root_path
+    page.should have_selector 'a', text: "Sign up now!"
+    %w[About Help Contact].each do |page_title|
+      click_link page_title
+      page.should have_selector 'title', text: page_title
+    end
+    click_link "logo"
+    page.should # fill in
+  end
 end

@@ -149,10 +149,14 @@ Chapter 5 Filling in the Layout:
             ✔ DRY up "visit root_path" using 'before' block @done (13-04-11 22:26)
             ✔ DRY up descriptions & functional code using 'subject' and 'it' blocks @done (13-04-11 22:33)
             ✔ Do full_title exercise from Section 5.6 @done (13-04-11 23:24)
-        5.4 User Signup Stub:
+        5.4-5 User Signup Stub:
             ✔ Create Users controller w/'new' action @done (13-04-11 23:25)
             rails g controller Users new --no-test-framework
             ✔ Write tests for app/views/users/new.html.erb @done (13-04-11 23:33)
             rails g integration_test user_pages
             ✔ Get tests to pass @done (13-04-11 23:39)
             ✔ Add sign up button on Home page @done (13-04-11 23:43)
+        5.6 Exercises
+            ✔ See 5.3.4 @done (13-04-11 23:46)
+            ✔ Add link checking to specs @done (13-04-12 00:05)
+            ☐ Replace spec helper (full_title) with spec for the actual method
