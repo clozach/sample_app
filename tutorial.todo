@@ -155,3 +155,4 @@ Chapter 5 Filling in the Layout:
             ✔ Write tests for app/views/users/new.html.erb @done (13-04-11 23:33)
             rails g integration_test user_pages
             ✔ Get tests to pass @done (13-04-11 23:39)
+            ✔ Add sign up button on Home page @done (13-04-11 23:43)
