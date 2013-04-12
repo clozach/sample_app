@@ -136,4 +136,4 @@ Chapter 5 Filling in the Layout:
             Benefits of (e.g.) SASS: nesting CSS, variables, mixins
             ✔ Combine ".center" & ".center h1" @done (13-04-11 16:31)
             ✔ Nest :hover using &:hover syntax @done (13-04-11 17:16)
-            ☐ etc.
+            ✔ etc. @done (13-04-11 17:21)
