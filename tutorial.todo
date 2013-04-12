@@ -137,3 +137,8 @@ Chapter 5 Filling in the Layout:
             ✔ Combine ".center" & ".center h1" @done (13-04-11 16:31)
             ✔ Nest :hover using &:hover syntax @done (13-04-11 17:16)
             ✔ etc. @done (13-04-11 17:21)
+    5.3 Layout Links:
+        5.3.0 Contact link:
+            ✔ Add tests in static_pages_spec.rb @done (13-04-11 17:31)
+            Note: The title test from the book was already covered in my DRY-er "Title tag" context
+            ☐ Add route for Contact page

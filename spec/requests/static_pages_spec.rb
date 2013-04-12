@@ -33,4 +33,11 @@ describe "StaticPages" do
       page.should have_selector('h1', text: 'About this unnecessary page')
     end
   end
+
+  context "Contact page" do
+    it "should have the h1 'Contact'" do
+      visit '/static_pages/contact'
+      page.should have_selector('h1', text: 'Do not contact me, please')
+    end
+  end
 end
