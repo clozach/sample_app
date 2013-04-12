@@ -135,5 +135,5 @@ Chapter 5 Filling in the Layout:
         5.2.2 DRY w/Sass:
             Benefits of (e.g.) SASS: nesting CSS, variables, mixins
             ✔ Combine ".center" & ".center h1" @done (13-04-11 16:31)
-            X Combine "#logo" and "#logo:hover" (n/a since I opted for bootstrap's "brand" class)
+            ✔ Nest :hover using &:hover syntax @done (13-04-11 17:16)
             ☐ etc.

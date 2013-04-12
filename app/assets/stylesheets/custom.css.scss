@@ -79,10 +79,9 @@ footer small, footer small a {
 
 .navbar .nav > li > a {
 	color: #789;
-}
-
-.navbar .nav > li > a:hover {
-	color: #aaa;
+	&:hover {
+		color: #aaa;
+	}
 }
 
 // footer ul {
