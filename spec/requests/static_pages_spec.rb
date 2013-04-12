@@ -4,7 +4,7 @@ describe "StaticPages" do
   let(:base_title) { "Sample App" }
 
   context "Title tag"
-  %w[Home Help About Contact].each do |file|
+  %w[Help About Contact].each do |file|
     it "should contain base_title and #{file}" do
       lower = file.downcase 
       path = "#{lower}_path"
@@ -15,8 +15,13 @@ describe "StaticPages" do
 
   context "Home Page" do
     it "should have the content base_title" do
-    	visit home_path #visit => Capybara method loads content into 'page'
+    	visit root_path #visit => Capybara method loads content into 'page'
     	page.should have_selector('h1', text: base_title)
+    end
+
+    it "should NOT have Home in the title" do
+      visit root_path
+      page.should have_selector('h1', text: base_title)
     end
   end
 
