@@ -152,4 +152,6 @@ Chapter 5 Filling in the Layout:
         5.4 User Signup Stub:
             ✔ Create Users controller w/'new' action @done (13-04-11 23:25)
             rails g controller Users new --no-test-framework
-            ☐ Write tests for app/views/users/new.html.erb
+            ✔ Write tests for app/views/users/new.html.erb @done (13-04-11 23:33)
+            rails g integration_test user_pages
+            ✔ Get tests to pass @done (13-04-11 23:39)
