@@ -29,6 +29,8 @@ GEM
     activesupport (3.2.12)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    annotate (2.5.0)
+      rake
     arel (3.0.2)
     autotest-fsevent (0.2.8)
       sys-uname
@@ -149,6 +151,7 @@ PLATFORMS
 
 DEPENDENCIES
   ZenTest
+  annotate
   autotest-fsevent
   autotest-growl
   autotest-rails
