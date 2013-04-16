@@ -176,8 +176,8 @@ Chapter 6 Modeling Users:
     6.2 User Validations:
             ✔ Red: should respond to attributes: email/name @done (13-04-15 17:34)
             ✔ Green @done (13-04-15 17:34)
-            ☐ Red: should validate presence of both attributes on save
-            ☐ Green
+            ✔ Red: should validate presence of both attributes on save @done (13-04-15 17:38)
+            ✔ Green @done (13-04-15 17:38)
             ☐ Red: should validate length <= 50 characters long
             ☐ Green
             ☐ Red: should validate email format (regex)
