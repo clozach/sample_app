@@ -183,7 +183,9 @@ Chapter 6 Modeling Users:
             ✔ Red: should validate email format (regex) @done (13-04-15 17:58)
             ✔ Green @done (13-04-15 18:00)
             ✔ Mess around w/Rubular.com @done (13-04-15 18:00)
-            ☐ Red: should validate uniqueness of email
+            ✔ Red: should validate in-memory uniqueness of email @done (13-04-15 18:08)
+            ✔ Green @done (13-04-15 18:08)
+            ☐ Red: should validate database-level uniqueness of email
             ☐ Green
     6.3 Adding a Secure Password:
             ☐ ...
