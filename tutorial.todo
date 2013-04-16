@@ -180,9 +180,9 @@ Chapter 6 Modeling Users:
             ✔ Green @done (13-04-15 17:38)
             ✔ Red: should validate length <= 50 characters @done (13-04-15 17:47)
             ✔ Green @done (13-04-15 17:47)
-            ☐ Red: should validate email format (regex)
-            ☐ Green
-            ☐ Mess around w/Rubular.com 
+            ✔ Red: should validate email format (regex) @done (13-04-15 17:58)
+            ✔ Green @done (13-04-15 18:00)
+            ✔ Mess around w/Rubular.com @done (13-04-15 18:00)
             ☐ Red: should validate uniqueness of email
             ☐ Green
     6.3 Adding a Secure Password:
