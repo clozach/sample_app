@@ -162,9 +162,28 @@ Chapter 5 Filling in the Layout:
             ✔ Replace spec helper (full_title) with spec for the actual method @done (13-04-12 00:13)
 Chapter 6 Modeling Users:
     6.1 User Model:
-        ☐ Ask Turner: what authentication system are _we_ using?
-        ✔ Generate a Users controller (w/migration, model & spec) @done (13-04-15 09:22)
-        rails g model User name:string email:string
-        ✔ Apply migration @done (13-04-15 09:26)
-        rake db:migrate
-        
+            ☐ Ask Turner: what authentication system are _we_ using?
+            ✔ Generate a Users controller (w/migration, model & spec) @done (13-04-15 09:22)
+            rails g model User name:string email:string
+            ✔ Apply migration @done (13-04-15 09:26)
+            rake db:migrate
+            ✔ Add annotate gem (optional) @done (13-04-15 09:32)
+            --> In Gemfile: gem 'annotate'
+            bundle
+            annotate
+            ✔ Fuck around with create/find/find_by_*/update_attributes/etc. in sandbox console @done (13-04-15 09:43)
+            rails c --sandbox
+    6.2 User Validations:
+            ✔ Red: should respond to attributes: email/name @done (13-04-15 17:34)
+            ✔ Green @done (13-04-15 17:34)
+            ☐ Red: should validate presence of both attributes on save
+            ☐ Green
+            ☐ Red: should validate length <= 50 characters long
+            ☐ Green
+            ☐ Red: should validate email format (regex)
+            ☐ Green
+            ☐ Mess around w/Rubular.com 
+            ☐ Red: should validate uniqueness of email
+            ☐ Green
+    6.3 Adding a Secure Password:
+            ☐ ...
