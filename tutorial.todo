@@ -178,8 +178,8 @@ Chapter 6 Modeling Users:
             ✔ Green @done (13-04-15 17:34)
             ✔ Red: should validate presence of both attributes on save @done (13-04-15 17:38)
             ✔ Green @done (13-04-15 17:38)
-            ☐ Red: should validate length <= 50 characters long
-            ☐ Green
+            ✔ Red: should validate length <= 50 characters @done (13-04-15 17:47)
+            ✔ Green @done (13-04-15 17:47)
             ☐ Red: should validate email format (regex)
             ☐ Green
             ☐ Mess around w/Rubular.com 

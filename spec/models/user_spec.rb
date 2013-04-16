@@ -31,4 +31,9 @@ describe User do
 		it { should_not be_valid }
 	end
 
+	context "too-long name" do
+		before { @user.name = "a" * 51 }
+		it { should_not be_valid }
+	end
+
 end
