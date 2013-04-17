@@ -186,7 +186,7 @@ Chapter 6 Modeling Users:
             ✔ Red: should validate in-memory uniqueness of email @done (13-04-15 18:08)
             ✔ Green @done (13-04-15 18:08)
             ✔ Red: should validate database-level uniqueness of email @done (13-04-16 10:18)
-            ☐ Green
+            ✔ Green @done (13-04-17 10:43)
             rails generate migration add_index_to_users_email
             bundle exec db:migrate
             --> And add to model/user.rb ... before_save { self.email.downcase! }

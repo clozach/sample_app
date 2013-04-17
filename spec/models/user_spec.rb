@@ -69,13 +69,12 @@ describe User do
 	describe "when user is created twice in sequence" do
 		it "should only get saved once" do
 			email = "foo@bar.com"
-			p User.where(email: email).each { |user| user.destroy }
+			User.where(email: email).each { |user| user.destroy }
 			User.where(email: email).count.should be(0)
 			one = User.new(name: "a", email: email)
-			two = User.new(name: "b", email: email)
+			two = User.new(name: "b", email: email.upcase)
 			two.set_secondary one
-			two.save
-			User.where(email: email).count.should be(1)
+			expect{two.save}.to raise_error()
 		end
 	end
 end

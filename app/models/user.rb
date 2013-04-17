@@ -16,14 +16,18 @@ class User < ActiveRecord::Base
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: VALID_EMAIL_REGEX }
 
-	before_save { save_secondary }
+	before_save do
+		self.email.downcase!
 
-	def save_secondary
-		p @secondary
-		@secondary.save if @secondary
+		if Rails.env.test?
+			begin
+				@secondary.save if @secondary
+			rescue
+			end
+		end
 	end
 
-	def set_secondary(sec)
+	def set_secondary(sec) # Used in testing to trigger a race condition. See Section 6.2.5 Uniqueness caveats
 		@secondary = sec
 	end
 end
