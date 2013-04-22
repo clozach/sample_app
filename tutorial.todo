@@ -191,4 +191,23 @@ Chapter 6 Modeling Users:
             bundle exec db:migrate
             --> And add to model/user.rb ... before_save { self.email.downcase! }
     6.3 Adding a Secure Password:
-            ☐ ...
+            6.3.1 Support for password encryption:
+                        ✔ Add bcrypt-ruby gem for hash generation @done (13-04-22 09:29)
+                        --> In Gemfile: gem 'bcrypt-ruby'
+                        bundle
+                        ☐ Red: respond_to :password_digest spec
+                        ☐ Green: Add password_digest column to users table to support has_secure_password magic
+                        rails generate migration AddPasswordDigestToUsers password_digest:string
+                        bundle exec rake db:migrate
+                        bundle exec rake db:test:prepare
+            6.3.2-4 Password & confirmation attributes:
+                    ☐ Red: respond_to specs for :password & :password_confirmation
+                    ☐ Green
+                    ☐ Red: spec to disallow blank passwords
+                    ☐ Green
+                    ☐ Red: spec to ensure password and confirmation match
+                    ☐ Green
+                    ☐ Red: spec to ensure that nil password_confirmation is invalid ('cause nil skips validation on that field by default')
+                    ☐ Green
+                    ☐ Red: authentication specs
+                    ☐ Green
